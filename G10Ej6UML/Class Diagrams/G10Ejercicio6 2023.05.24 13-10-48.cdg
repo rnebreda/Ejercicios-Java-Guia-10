@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="G10Ejercicio6">
+  <ClassDiagramComponents>
+    <Class name="Producto" package="entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="precio" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="Double" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio" returnType="Double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="Double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Object" name="t"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="G10Ejercicio6" package="g10ejercicio6" visibility="public" xPosition="134.0" yPosition="590.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductoServicio" package="servicios" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="catalogo" type="Map&lt;Integer, Producto&gt;" visibility="package"/>
+        <Field name="nroProducto" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearProducto" returnType="void" visibility="public"/>
+        <Method name="modificarPrecio" returnType="void" visibility="public"/>
+        <Method name="mostrarProductos" returnType="void" visibility="public"/>
+        <Method name="borrarProducto" returnType="void" visibility="public"/>
+        <Method name="ordenarProductos" returnType="void" visibility="public">
+          <Argument type="Comparator" name="c"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparaProductos" package="utilidades" visibility="public" xPosition="771.0" yPosition="371.0">
+      <Fields>
+        <Field name="nombreMayorAMenor" type="Comparator&lt;Producto&gt;" visibility="public" isStatic="true"/>
+        <Field name="nombreMenorAMayor" type="Comparator&lt;Producto&gt;" visibility="public" isStatic="true"/>
+        <Field name="precioMayorAMenor" type="Comparator&lt;Producto&gt;" visibility="public" isStatic="true"/>
+        <Field name="precioMenorAMayor" type="Comparator&lt;Producto&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="nombreMayorAMenor" source="utilidades.ComparaProductos" target="entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="precioMenorAMayor" source="utilidades.ComparaProductos" target="entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nombreMenorAMayor" source="utilidades.ComparaProductos" target="entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="precioMayorAMenor" source="utilidades.ComparaProductos" target="entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="catalogo" source="servicios.ProductoServicio" target="entidades.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;Integer, Producto&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

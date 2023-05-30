@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="G10Extra4">
+  <ClassDiagramComponents>
+    <Class name="G10Extra4" package="g10extra4" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PostalesServicio" package="servicios" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="PostCode" type="Map&lt;Integer, String&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="ingresoPostCode" returnType="void" visibility="public"/>
+        <Method name="cargarDiez" returnType="void" visibility="public"/>
+        <Method name="mostrarMapa" returnType="void" visibility="public"/>
+        <Method name="buscarPostCode" returnType="void" visibility="public"/>
+        <Method name="eliminarCiudad" returnType="void" visibility="public"/>
+        <Method name="eliminarTres" returnType="void" visibility="public"/>
+        <Method name="mostrarOrdenado" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
